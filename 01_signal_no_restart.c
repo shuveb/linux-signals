@@ -41,7 +41,7 @@ int main() {
         bzero(buff, sizeof(buff));
         if( read(STDIN_FILENO, buff, sizeof(buff)-1 ) == -1 )
             handle_error("read");
-        if( write(STDIN_FILENO, buff, sizeof(buff) ) == -1 )
+        if( write(STDOUT_FILENO, buff, sizeof(buff) ) == -1 )
             handle_error("write");
    }
 
